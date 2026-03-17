@@ -1,0 +1,291 @@
+{
+  "total_pairs": 4026,
+  "duplicates_removed": 51,
+  "dictionary_entries": 1161,
+  "avg_waimaa_tokens": 5.11,
+  "avg_english_tokens": 5.45,
+  "genres": [
+    "Abel_koremetan",
+    "Aleixo_sanulo1",
+    "Amand_7birds",
+    "Cooking",
+    "Dom1_stor1",
+    "Joao_sambutan1",
+    "Julio_bulero",
+    "Matekai",
+    "Mauricio_CV",
+    "Pear_bendita2",
+    "Santon_dadolin",
+    "belis_negotia",
+    "hermene_waima",
+    "householditems",
+    "romaldo_liurai",
+    "sukufoun_day1",
+    "tarabandu"
+  ],
+  "speakers": [
+    "Abel",
+    "Aleixo",
+    "Alex",
+    "Anak",
+    "Bendita",
+    "Benánsio",
+    "Carlito",
+    "Carolinha",
+    "Crispin",
+    "Crispín",
+    "Daniél",
+    "Dario",
+    "Davit",
+    "Delfín",
+    "Dário",
+    "Ernesto",
+    "Feliciano",
+    "Female",
+    "GamuLoi",
+    "Geroni",
+    "Gildo",
+    "Graciano",
+    "Hero",
+    "Jacinta",
+    "Jaime",
+    "Jasinta",
+    "Joanita",
+    "Joao",
+    "Jorge",
+    "José Ricardo",
+    "João",
+    "Juaninha",
+    "Júlio",
+    "Labarik",
+    "Labirik",
+    "Lamberto",
+    "Luís",
+    "Luís_V",
+    "MB",
+    "Manuél",
+    "Marcos",
+    "Mário",
+    "NH",
+    "Nevia",
+    "Nivia",
+    "Noi",
+    "Oste",
+    "Ostelinha",
+    "Rita",
+    "Romaldo",
+    "Sabina",
+    "Saturnino",
+    "SusuLoi",
+    "segmentheader"
+  ],
+  "files": [
+    {
+      "file": "Abel_koremetan.tbt",
+      "genre": "Abel_koremetan",
+      "total_records": 62,
+      "usable_pairs": 54,
+      "participants": [
+        "Abel",
+        "MB"
+      ]
+    },
+    {
+      "file": "Aleixo_sanulo1.tbt",
+      "genre": "Aleixo_sanulo1",
+      "total_records": 343,
+      "usable_pairs": 306,
+      "participants": [
+        "Alex",
+        "MB",
+        "Nevia",
+        "Nivia",
+        "Rita"
+      ]
+    },
+    {
+      "file": "Amand_7birds.tbt",
+      "genre": "Amand_7birds",
+      "total_records": 194,
+      "usable_pairs": 186,
+      "participants": []
+    },
+    {
+      "file": "Cooking.tbt",
+      "genre": "Cooking",
+      "total_records": 167,
+      "usable_pairs": 125,
+      "participants": [
+        "Carolinha",
+        "Davit",
+        "Jacinta",
+        "Jasinta",
+        "Joanita",
+        "Juaninha",
+        "Labarik",
+        "Labirik",
+        "Noi",
+        "Oste",
+        "Ostelinha",
+        "Sabina"
+      ]
+    },
+    {
+      "file": "Dom1_stor1.tbt",
+      "genre": "Dom1_stor1",
+      "total_records": 26,
+      "usable_pairs": 22,
+      "participants": []
+    },
+    {
+      "file": "Joao_sambutan1.tbt",
+      "genre": "Joao_sambutan1",
+      "total_records": 146,
+      "usable_pairs": 139,
+      "participants": [
+        "Hero",
+        "Joao"
+      ]
+    },
+    {
+      "file": "Julio_bulero.tbt",
+      "genre": "Julio_bulero",
+      "total_records": 160,
+      "usable_pairs": 142,
+      "participants": [
+        "Jaime",
+        "Júlio",
+        "Markus",
+        "NH"
+      ]
+    },
+    {
+      "file": "Matekai.tbt",
+      "genre": "Matekai",
+      "total_records": 43,
+      "usable_pairs": 33,
+      "participants": [
+        "Ameta",
+        "JB",
+        "MB",
+        "Marcos",
+        "Romaldo"
+      ]
+    },
+    {
+      "file": "Mauricio_CV.tbt",
+      "genre": "Mauricio_CV",
+      "total_records": 70,
+      "usable_pairs": 64,
+      "participants": []
+    },
+    {
+      "file": "Pear_bendita2.tbt",
+      "genre": "Pear_bendita2",
+      "total_records": 55,
+      "usable_pairs": 44,
+      "participants": [
+        "Bendita",
+        "MB"
+      ]
+    },
+    {
+      "file": "Santon_dadolin.tbt",
+      "genre": "Santon_dadolin",
+      "total_records": 145,
+      "usable_pairs": 114,
+      "participants": [
+        "Aleixo",
+        "Edmundo",
+        "Joao",
+        "Povu",
+        "Y"
+      ]
+    },
+    {
+      "file": "belis_negotia.tbt",
+      "genre": "belis_negotia",
+      "total_records": 2052,
+      "usable_pairs": 1813,
+      "participants": [
+        "Anak",
+        "Crispín",
+        "Dario",
+        "Ernesto",
+        "Feliciano",
+        "Female",
+        "Geroni",
+        "Graciano",
+        "Jorge",
+        "José Ricardo",
+        "João",
+        "Lamberto",
+        "MB",
+        "Manuél",
+        "Mário",
+        "NH",
+        "Saturnino",
+        "Y"
+      ]
+    },
+    {
+      "file": "hermene_waima.tbt",
+      "genre": "hermene_waima",
+      "total_records": 660,
+      "usable_pairs": 565,
+      "participants": [
+        "Crispín",
+        "Delfín",
+        "Dário",
+        "GamuLoi",
+        "Gildo",
+        "Hapus",
+        "Luís",
+        "Luís_V",
+        "MB",
+        "SusuLoi"
+      ]
+    },
+    {
+      "file": "householditems.tbt",
+      "genre": "householditems",
+      "total_records": 47,
+      "usable_pairs": 43,
+      "participants": [
+        "Benánsio",
+        "Carlito",
+        "Daniél",
+        "MB"
+      ]
+    },
+    {
+      "file": "romaldo_liurai.tbt",
+      "genre": "romaldo_liurai",
+      "total_records": 237,
+      "usable_pairs": 216,
+      "participants": [
+        "Romaldo"
+      ]
+    },
+    {
+      "file": "sukufoun_day1.tbt",
+      "genre": "sukufoun_day1",
+      "total_records": 1,
+      "usable_pairs": 1,
+      "participants": [
+        "segmentheader"
+      ]
+    },
+    {
+      "file": "tarabandu.tbt",
+      "genre": "tarabandu",
+      "total_records": 219,
+      "usable_pairs": 210,
+      "participants": [
+        "Crispin",
+        "João",
+        "MB"
+      ]
+    }
+  ]
+}

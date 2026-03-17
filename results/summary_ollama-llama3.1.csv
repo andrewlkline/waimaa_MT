@@ -1,0 +1,7 @@
+model,n_tfidf,n_embed,use_dict,n_test,bleu,chrf,chrfpp
+ollama:llama3.1,0,0,False,43,0.13,11.45,8.63
+ollama:llama3.1,0,0,True,43,0.13,10.27,7.78
+ollama:llama3.1,5,0,False,43,0.7,17.88,14.97
+ollama:llama3.1,5,0,True,43,0.5,17.49,14.49
+ollama:llama3.1,10,0,False,43,0.86,17.93,15.43
+ollama:llama3.1,10,0,True,43,1.84,18.07,15.71
