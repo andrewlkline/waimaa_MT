@@ -59,6 +59,25 @@ Provide only the Waima'a translation, nothing else.
 English: {source}
 Waima'a:"""
 
+PROMPT_TEMPLATE_STRICT = """\
+Translate the following English sentence into Waima'a (a language of Timor-Leste).
+
+Rules:
+- Output ONLY the Waima'a translation
+- Do NOT explain your reasoning
+- Do NOT say you cannot translate
+- Do NOT add any commentary before or after
+- If uncertain, output your best attempt based on the examples below
+
+# Example sentences
+{examples}
+
+# Dictionary entries
+{dictionary}
+
+English: {source}
+Waima'a:"""
+
 
 # ── Corpus loading ─────────────────────────────────────────────────────────────
 
@@ -126,7 +145,7 @@ def retrieve_embed(source, embed_model, embeddings, train, n):
 
 # ── Prompt construction ───────────────────────────────────────────────────────
 
-def build_prompt(source, retrieved, dictionary, use_dict):
+def build_prompt(source, retrieved, dictionary, use_dict, strict=False):
     # Deduplicate retrieved examples (tfidf + embed may overlap)
     seen = set()
     unique = []
@@ -152,7 +171,8 @@ def build_prompt(source, retrieved, dictionary, use_dict):
     else:
         dict_lines = "(none)"
 
-    return PROMPT_TEMPLATE.format(
+    template = PROMPT_TEMPLATE_STRICT if strict else PROMPT_TEMPLATE
+    return template.format(
         examples=example_lines,
         dictionary=dict_lines,
         source=source,
@@ -310,7 +330,7 @@ def score(hypotheses, references):
 # ── Main experiment loop ──────────────────────────────────────────────────────
 
 def run_experiment(train, test, dictionary, model_spec, api_key,
-                   n_tfidf, n_embed, use_dict,
+                   n_tfidf, n_embed, use_dict, strict_prompt=False,
                    tfidf_components=None, embed_components=None):
 
     label = (f"model={model_spec}  n_tfidf={n_tfidf}  "
@@ -334,7 +354,7 @@ def run_experiment(train, test, dictionary, model_spec, api_key,
         # Interleave: tfidf first, then embed (dedup handled in build_prompt)
         retrieved = tfidf_hits + embed_hits
 
-        prompt = build_prompt(source, retrieved, dictionary, use_dict)
+        prompt = build_prompt(source, retrieved, dictionary, use_dict, strict=strict_prompt)
         translation = translate(prompt, model_spec, api_key)
         hypotheses.append(translation)
 
@@ -353,6 +373,7 @@ def run_experiment(train, test, dictionary, model_spec, api_key,
         "n_tfidf":   n_tfidf,
         "n_embed":   n_embed,
         "use_dict":  use_dict,
+        "strict_prompt": strict_prompt,
         "n_test":    len(test),
         **scores,
         "hypotheses": hypotheses,
@@ -380,6 +401,8 @@ def main():
                         help="Embedding examples per prompt (default 0; requires sentence-transformers+torch)")
     parser.add_argument("--use-dict",   action="store_true",
                         help="Include dictionary entries in prompt")
+    parser.add_argument("--strict-prompt", action="store_true",
+                        help="Use stricter prompt that forbids meta-commentary (good for Sonnet)")
     parser.add_argument("--sweep",      action="store_true",
                         help="Run full hyperparameter sweep (ignores n-tfidf/n-embed/use-dict)")
     parser.add_argument("--out-dir",    default="results",
@@ -452,6 +475,7 @@ def main():
             n_tfidf=n_tfidf,
             n_embed=n_embed,
             use_dict=use_dict,
+            strict_prompt=args.strict_prompt,
             tfidf_components=tfidf_components,
             embed_components=embed_components if n_embed > 0 else None,
         )
@@ -469,7 +493,7 @@ def main():
     csv_path = out_dir / f"summary_{safe_model}.csv"
     with open(csv_path, "w", newline="", encoding="utf-8") as f:
         writer = csv.DictWriter(f, fieldnames=[
-            "model", "n_tfidf", "n_embed", "use_dict",
+            "model", "n_tfidf", "n_embed", "use_dict", "strict_prompt",
             "n_test", "bleu", "chrf", "chrfpp"
         ])
         writer.writeheader()

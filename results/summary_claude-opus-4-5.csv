@@ -1,0 +1,7 @@
+model,n_tfidf,n_embed,use_dict,strict_prompt,n_test,bleu,chrf,chrfpp
+claude-opus-4-5,0,0,False,True,43,0.22,13.34,10.18
+claude-opus-4-5,0,0,True,True,43,0.19,10.87,8.24
+claude-opus-4-5,5,0,False,True,43,0.84,18.32,16.0
+claude-opus-4-5,5,0,True,True,43,0.82,18.24,15.7
+claude-opus-4-5,10,0,False,True,43,1.95,19.5,17.58
+claude-opus-4-5,10,0,True,True,43,1.85,18.99,17.03

@@ -1,7 +1,7 @@
-model,n_tfidf,n_embed,use_dict,n_test,bleu,chrf,chrfpp
-claude-sonnet-4-6,0,0,False,43,0.02,7.88,5.91
-claude-sonnet-4-6,0,0,True,43,0.05,7.28,5.48
-claude-sonnet-4-6,5,0,False,43,0.32,14.96,12.63
-claude-sonnet-4-6,5,0,True,43,0.19,15.39,13.2
-claude-sonnet-4-6,10,0,False,43,0.28,15.36,13.15
-claude-sonnet-4-6,10,0,True,43,0.26,15.96,13.76
+model,n_tfidf,n_embed,use_dict,strict_prompt,n_test,bleu,chrf,chrfpp
+claude-sonnet-4-6,0,0,False,True,43,0.15,11.35,8.56
+claude-sonnet-4-6,0,0,True,True,43,0.15,11.29,8.55
+claude-sonnet-4-6,5,0,False,True,43,0.79,18.97,16.14
+claude-sonnet-4-6,5,0,True,True,43,0.79,18.73,15.91
+claude-sonnet-4-6,10,0,False,True,43,0.94,20.08,17.57
+claude-sonnet-4-6,10,0,True,True,43,0.95,19.92,17.6
